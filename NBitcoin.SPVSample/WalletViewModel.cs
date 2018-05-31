@@ -88,7 +88,7 @@ namespace NBitcoin.SPVSample
             get;
             set;
         }
-        
+
         internal static WalletViewModel[] Load(string directory)
         {
             List<WalletViewModel> wallets = new List<WalletViewModel>();
@@ -116,8 +116,6 @@ namespace NBitcoin.SPVSample
             }
             return wallets.ToArray();
         }
-        
-        
 
         private List<TransactionViewModel> _Transactions;
         public List<TransactionViewModel> Transactions
@@ -160,7 +158,7 @@ namespace NBitcoin.SPVSample
 
     public class TransactionViewModel
     {
-        public WalletTransaction _Transaction;
+        WalletTransaction _Transaction;
         public TransactionViewModel(WalletTransaction transaction)
         {
             _Transaction = transaction;

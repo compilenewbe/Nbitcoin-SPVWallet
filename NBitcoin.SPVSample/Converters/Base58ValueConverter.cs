@@ -19,7 +19,7 @@ namespace NBitcoin.SPVSample.Converters
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             var str = value as String;
-            return string.IsNullOrWhiteSpace(str) ? null : Network.TestNet;//CreateFromBase58Data(str, App.Network);
+            return string.IsNullOrWhiteSpace(str) ? null : Network.CreateFromBase58Data(str, App.Network);
         }
 
         #endregion
